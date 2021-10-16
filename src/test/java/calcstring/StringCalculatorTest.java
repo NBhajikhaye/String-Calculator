@@ -25,4 +25,10 @@ class StringCalculatorTest {
         assertEquals(0, stringCalculator.add("1\n,2"));
     }
 	
+	@Test
+    void string_with_negative_number_should_return_number_as_int() throws Exception {
+        StringCalculator stringCalculator = new StringCalculator();
+        assertEquals(0, stringCalculator.add("1,-2"));
+        assertEquals(0, stringCalculator.add("-1\n2"));
+    }
 }
