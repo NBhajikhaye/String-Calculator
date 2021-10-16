@@ -18,5 +18,11 @@ class StringCalculatorTest {
         assertEquals(1, stringCalculator.add("1"));
     }
 	
+	@Test
+    void string_with_wrong_separator_should_return_number_as_int() throws Exception {
+        StringCalculator stringCalculator = new StringCalculator();
+        assertEquals(0, stringCalculator.add("1,\n2"));
+        assertEquals(0, stringCalculator.add("1\n,2"));
+    }
 	
 }

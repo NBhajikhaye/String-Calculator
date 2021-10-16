@@ -6,10 +6,8 @@ public class StringCalculator
 	{
 		int i = 0, result = 0;
 
-		if (input == null )
+		if (input == null || input.contains("\n,") || input.contains(",\n"))
 			return 0;
-
-		
 
 		for (i = 0; i < input.length(); i++) {
 			if (Character.isDigit(input.charAt(i))) {
